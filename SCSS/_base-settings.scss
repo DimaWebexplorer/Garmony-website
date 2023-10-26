@@ -1,0 +1,42 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Baskerville Display PT';
+    src: url(../fonts/Baskerville-Display-PT-Bold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: map-get($colors, white);
+    color: map-get($colors, black);
+}
+
+.main-container {
+    width: 142rem;
+    margin: 0 calc((258/1920)*100%) 0 calc((242/1920)*100%);
+    overflow: hidden;
+    @include respond(laptop) {
+        margin: 0 auto;
+    }
+    @include respond(tablet) {
+        width: 90rem;
+    }
+    @include respond(phone) {
+        width: 37.5rem;
+    }
+}

@@ -1,0 +1,63 @@
+.cards-slider {
+    max-width: 138rem;
+    margin: 0 auto 15.7rem;
+    @include respond(tablet) {
+        max-width: 73rem;
+    }
+    @include respond(phone) {
+        max-width: 35.9rem;
+    }
+    &__title {
+        width: 60rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 5rem;
+        @include respond(phone) {
+            width: 33.5rem;
+        }
+    }
+    &__container {
+        display: flex;
+        gap: 0 1.5rem;
+        @include respond(phone) {
+            gap: 0 .2rem;
+        }
+        .icon {
+            display: inline-block;
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-top: 13.5rem;
+            transition: all .3s ease;
+            @include respond(phone) {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-top: 14rem; 
+            }
+            &_previous {
+                opacity: .3;
+            }
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.3);
+            }
+        }
+        .slider-box {
+            overflow: hidden;
+            position: relative;
+            &__wrapper {
+                position: relative;
+                display: flex;
+                width: 128rem;
+                gap: 0 2rem;
+                left: 0;
+                transition: all 1s ease;
+                @include respond(tablet) {
+                    width: 63rem;
+                }
+                @include respond(phone) {
+                    width: 30.5rem;
+                }
+            }
+        }
+    }
+}

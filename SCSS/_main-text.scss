@@ -1,0 +1,30 @@
+.main-text {
+    width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10rem;
+    @include respond(phone) {
+        width: 33.5rem;
+    }
+    &__description {
+        margin-bottom: 3rem;
+        &:nth-child(3) {
+            margin-bottom: .4rem;
+        }
+    }
+    &__br {
+        display: none;
+        @include respond(phone) {
+            display: inline-block;
+        }
+    }
+    &__hr {
+        width: 19rem;
+        margin: 0 auto;
+        height: .1rem;
+        background: map-get($colors, black);
+        @include respond(phone) {
+            width: 18.9rem;
+        }
+    }
+}
